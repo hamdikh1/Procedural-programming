@@ -1,0 +1,37 @@
+Fonction dot_product (var v1,v2 : ARRAY_OF INTEGER ) : INTEGER
+VAR
+I,ps : INTEGER
+n1,n2 : INTEGER
+
+BEGIN
+ps:= INTEGER
+i := INTEGER
+IF (v1.length<>v2.length) THEN
+write ("vectors are diffents")
+END IF
+While (i<v1.length) DO
+ps := ps +v1[i]*v2[i]
+i++
+END While
+
+RETURN ps
+
+END
+
+ALGORITHM orth-vectors
+Var
+v1,v2 : ARRAY_OF INTEGER [30]
+ps : INTEGER
+n1, n2 : INTEGER
+BEGIN
+n1 :=  read_size()
+red_array (n1,v1)
+n2 := read_size
+red_array(n2,v2)
+
+ps :=dot_product(v1,v2)
+IF(PS=0) THEN
+write("v1 and v2 are ortho")
+ELSE
+write("v1 and v2 are  not ortho")
+END
